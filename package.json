@@ -1,0 +1,39 @@
+{
+  "name": "texttemplateelement",
+  "widgetName": "TextTemplateElement",
+  "version": "1.0.0",
+  "description": "My widget description",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Jelte Lagendijk <jelte.lagendijk@mendix.com>",
+  "config": {
+    "widgetPath": "./dist/MxTestProject/widgets",
+    "projectPath": "./dist/MxTestProject/",
+    "mendixHost": "http://windows:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
+    "dev": "pluggable-widgets-tools start:ts",
+    "build": "pluggable-widgets-tools build:ts",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:ts"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.9.2",
+    "@types/big.js": "^4.0.5",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^24.0.0",
+    "@types/react": "~16.9.0",
+    "@types/react-dom": "~16.9.0",
+    "@types/react-test-renderer": "~16.9.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-markdown": "^4.3.1",
+    "remark-shortcodes": "^0.3.1"
+  }
+}

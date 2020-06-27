@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.texttemplateelement.TextTemplateElement" pluginWidget="true" needsEntityContext="false" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Text Template</name>
+    <description>Render Markdown/HTML in Mendix using a text template</description>
+    <icon>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</icon>
+    <properties>
+        <propertyGroup caption="Main">
+            <property key="dataTemplate" type="textTemplate" required="true" multiline="true">
+                <caption>Template</caption>
+                <description>This is the markdown/HTML that is rendered as React elements in your application</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Resources">
+            <property key="resImages" type="object" isList="true" required="false">
+                <caption>Images</caption>
+                <description></description>
+                <properties>
+                    <property key="imgKey" type="string" required="true" defaultValue="">
+                        <caption>Key</caption>
+                        <category>Image</category>
+                        <description>Key should only consist of lowercase letters and numbers, no spaces. (a-z,0-1). You can then use the image in your text template by surrounding it with $$. You key should be unique in all resources.
+
+Example: set key to 'image1'. You can then use the image url in your text template as '$$image1$$'</description>
+                    </property>
+                    <property key="imgImage" type="image" required="true">
+                        <caption>Image</caption>
+                        <category>Image</category>
+                        <description></description>
+                    </property>
+                </properties>
+            </property>
+            <property key="fileFile" type="file" required="false">
+                <caption>File</caption>
+                <description>You can associate 1 file (list is not supported for now due to platform related issues) to the text-template.
+
+This is translated in the template to '$$file$$'</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="HTML">
+            <property key="optEscapeHTML" type="boolean" defaultValue="true">
+                <caption>Escape HTML</caption>
+                <description>Setting to "No" will cause HTML (in Markdown) to be rendered. Be aware this might cause security/UI issues if the input is user-generated. Use at your own risk. The library will block any &lt;script&gt; elements, but you cannot purely rely on it.</description>
+            </property>
+            <property key="optSkipHTML" type="boolean" defaultValue="false">
+                <caption>Skip HTML</caption>
+                <description>Setting to true will skip inlined and blocks of HTML.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Misc">
+            <property key="optSourcePos" type="boolean" defaultValue="false">
+                <caption>Source Pos</caption>
+                <description>Setting to true will add data-sourcepos attributes to all elements, indicating where in the markdown source they were rendered from</description>
+            </property>
+            <property key="optRawSourcePos" type="boolean" defaultValue="false">
+                <caption>Raw Source Pos</caption>
+                <description>Setting to true will pass a sourcePosition property to all renderers with structured source position information</description>
+            </property>
+            <property key="optIncludeNodeIndex" type="boolean" defaultValue="false">
+                <caption>Include Node index</caption>
+                <description>Setting to true will pass index and parentChildCount props to all renderers</description>
+            </property>
+            <property key="optDisallowedTypes" type="string" required="false">
+                <caption>Disallowed nodes</caption>
+                <description>Comma seperated list of nodes that are disallowed.</description>
+            </property>
+            <property key="optUnwrapDisallowed" type="boolean" defaultValue="false">
+                <caption>Unwrap disallowed</caption>
+                <description>Setting to true will try to extract/unwrap the children of disallowed nodes. For instance, if disallowing Strong, the default behaviour is to simply skip the text within the strong altogether, while the behaviour some might want is to simply have the text returned without the strong wrapping it.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
