@@ -15,7 +15,7 @@ This uses the [react-markdown](https://github.com/rexxars/react-markdown) librar
 
 ![logo](/assets/AppStoreIcon.png)
 
-> See test-project (**_to be published_**) for a live demo!
+> See [test-project](https://markdownelement-te-sandbox.mxapps.io/) for a live demo!
 
 ![preview](/assets/template.png)
 
@@ -59,7 +59,7 @@ By default HTML is escaped and should not render. You can switch this off. If yo
 
 ## Test project
 
-The Test-project can be downloaded here: __*To be published*__
+The Test-project can be downloaded here: [https://github.com/JelteMX/widget-test-projects#text-template](https://github.com/JelteMX/widget-test-projects#text-template)
 
 ## Issues, suggestions and feature requests
 
