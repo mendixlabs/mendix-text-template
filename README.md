@@ -3,8 +3,8 @@
 [![DevDependencies](https://david-dm.org/JelteMX/mendix-text-template/dev-status.svg)]([https://david-dm.org/JelteMX/mendix-text-template?type=dev](https://david-dm.org/JelteMX/mendix-text-template?type=dev))
 [![Support](https://img.shields.io/badge/Support-Community%20(no%20active%20support)-orange.svg)](https://docs.mendix.com/developerportal/app-store/app-store-content-support)
 [![Studio](https://img.shields.io/badge/Studio%20version-8.6.4%2B-blue.svg)](https://appstore.home.mendix.com/link/modeler/)
-![GitHub release](https://img.shields.io/github/release/JelteMX/mendix-text-template)
-![GitHub issues](https://img.shields.io/github/issues/JelteMX/mendix-text-template)
+[![GitHub release](https://img.shields.io/github/release/JelteMX/mendix-text-template)](https://github.com/JelteMX/mendix-text-template/releases/latest)
+[![GitHub issues](https://img.shields.io/github/issues/JelteMX/mendix-text-template)](https://github.com/JelteMX/mendix-text-template/issues)
 [![Available](https://img.shields.io/badge/Test%20Project-available-green.svg)](https://github.com/JelteMX/widget-test-projects)
 
 # Mendix Text Template
