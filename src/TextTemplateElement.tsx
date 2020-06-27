@@ -12,6 +12,7 @@ import "./ui/TextTemplateElement.scss";
 import { filteredList } from "./util/react-markdown";
 import { renderers } from "./util/shortcodes";
 import { replaceImages, replaceFile } from "./util/replacer";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> = ({
     class: className,
@@ -47,19 +48,21 @@ const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> 
         }
 
         return (
-            <ReactMarkdown
-                source={content}
-                className={containerClass}
-                skipHtml={optSkipHTML}
-                escapeHtml={optEscapeHTML}
-                sourcePos={optSourcePos}
-                rawSourcePos={optRawSourcePos}
-                includeNodeIndex={optIncludeNodeIndex}
-                unwrapDisallowed={optUnwrapDisallowed}
-                disallowedTypes={disallowed}
-                plugins={[shortcodes]}
-                renderers={renderers}
-            />
+            <ErrorBoundary className={className} content={content}>
+                <ReactMarkdown
+                    source={content}
+                    className={containerClass}
+                    skipHtml={optSkipHTML}
+                    escapeHtml={optEscapeHTML}
+                    sourcePos={optSourcePos}
+                    rawSourcePos={optRawSourcePos}
+                    includeNodeIndex={optIncludeNodeIndex}
+                    unwrapDisallowed={optUnwrapDisallowed}
+                    disallowedTypes={disallowed}
+                    plugins={[shortcodes]}
+                    renderers={renderers}
+                />
+            </ErrorBoundary>
         );
     }
 
