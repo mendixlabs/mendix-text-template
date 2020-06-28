@@ -4,13 +4,14 @@ import classNames from "classnames";
 import ReactMarkdown from "react-markdown/with-html";
 
 const shortcodes = require("remark-shortcodes");
+const fenced = require("remark-fenced-divs");
 
 import { TextTemplateElementContainerProps } from "../typings/TextTemplateElementProps";
 
 import "./ui/TextTemplateElement.scss";
 
 import { filteredList } from "./util/react-markdown";
-import { getRenderers } from "./util/shortcodes";
+import { getRenderers } from "./util/renderers";
 import { replaceImages, replaceFile } from "./util/replacer";
 import ErrorBoundary from "./components/ErrorBoundary";
 
@@ -60,7 +61,7 @@ const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> 
                     includeNodeIndex={optIncludeNodeIndex}
                     unwrapDisallowed={optUnwrapDisallowed}
                     disallowedTypes={disallowed}
-                    plugins={[shortcodes]}
+                    plugins={[shortcodes, fenced]}
                     renderers={getRenderers({ contentRender: dataContent })}
                 />
             </ErrorBoundary>

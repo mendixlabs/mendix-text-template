@@ -9825,6 +9825,11 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
+remark-fenced-divs@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/remark-fenced-divs/-/remark-fenced-divs-1.1.1.tgz#99970e9dcf47903011de002e7033104a9a107cb5"
+  integrity sha512-VydiaIES34Ywlzofwnv9nQy0OmfXrMwl4zKtHV0GAhFDadoxD9Ufhg1XiC3xfZJXj/0F9cPt5TcSPOLx9YZoJw==
+
 remark-parse@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
