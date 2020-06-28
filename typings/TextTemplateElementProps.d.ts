@@ -3,7 +3,7 @@
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix UI Content Team
  */
-import { CSSProperties } from "react";
+import { ComponentType, CSSProperties, ReactNode } from "react";
 import { DynamicValue, FileValue, WebImage } from "mendix";
 
 export interface ResImagesType {
@@ -22,6 +22,7 @@ export interface TextTemplateElementContainerProps {
     style?: CSSProperties;
     tabIndex: number;
     dataTemplate: DynamicValue<string>;
+    dataContent?: ReactNode;
     resImages: ResImagesType[];
     fileFile?: DynamicValue<FileValue>;
     optEscapeHTML: boolean;
@@ -37,6 +38,7 @@ export interface TextTemplateElementPreviewProps {
     class: string;
     style: string;
     dataTemplate: string;
+    dataContent: { widgetCount: number; renderer: ComponentType };
     resImages: ResImagesPreviewType[];
     fileFile: string;
     optEscapeHTML: boolean;

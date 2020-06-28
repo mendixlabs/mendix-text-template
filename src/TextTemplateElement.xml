@@ -10,7 +10,13 @@
         <propertyGroup caption="Main">
             <property key="dataTemplate" type="textTemplate" required="true" multiline="true">
                 <caption>Template</caption>
-                <description>This is the markdown/HTML that is rendered as React elements in your application</description>
+                <description>This is the markdown/HTML that is rendered as React elements in your application.
+
+If you use the optional Mendix Content, you can render that here with the shortcode: [[ content ]]</description>
+            </property>
+            <property key="dataContent" type="widgets" required="false">
+                <caption>Optional Mendix content</caption>
+                <description>This is purely optional</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Resources">

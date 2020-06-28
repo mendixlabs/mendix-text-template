@@ -10,13 +10,14 @@ import { TextTemplateElementContainerProps } from "../typings/TextTemplateElemen
 import "./ui/TextTemplateElement.scss";
 
 import { filteredList } from "./util/react-markdown";
-import { renderers } from "./util/shortcodes";
+import { getRenderers } from "./util/shortcodes";
 import { replaceImages, replaceFile } from "./util/replacer";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> = ({
     class: className,
     dataTemplate,
+    dataContent,
     resImages,
     fileFile,
     optDisallowedTypes,
@@ -60,7 +61,7 @@ const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> 
                     unwrapDisallowed={optUnwrapDisallowed}
                     disallowedTypes={disallowed}
                     plugins={[shortcodes]}
-                    renderers={renderers}
+                    renderers={getRenderers({ contentRender: dataContent })}
                 />
             </ErrorBoundary>
         );

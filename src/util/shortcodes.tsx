@@ -1,4 +1,4 @@
-import { SFC, createElement, ComponentType, ReactElement } from "react";
+import { SFC, createElement, ComponentType, ReactElement, ReactNode } from "react";
 
 export interface RendererProps<TProps = any> {
     readonly identifier: string;
@@ -10,16 +10,25 @@ export type Renderers = { [key: string]: Renderer };
 
 const nodesToComponents: Record<string, ComponentType<any>> = {};
 
-const shortcodeRenderer = (props: RendererProps): ReactElement | null => {
-    const componentProps = props.attributes;
-    const Component = nodesToComponents[props.identifier];
-    if (Component) {
-        return <Component {...componentProps} />;
-    }
-    // return <span className="text-danger error">--Widget error, unsupported shortcode: {props.identifier}--</span>;
-    return null;
+const shortcodeRenderer = (getRenderProps: GetRendersProps) => {
+    return (props: RendererProps): ReactElement | null => {
+        const componentProps = props.attributes;
+        const Component = nodesToComponents[props.identifier];
+        if (Component) {
+            return <Component {...componentProps} />;
+        } else if (props.identifier === "content" && getRenderProps.contentRender) {
+            return getRenderProps.contentRender as ReactElement;
+        }
+        return null;
+    };
 };
 
-export const renderers: Renderers = {
-    shortcode: shortcodeRenderer
+export interface GetRendersProps {
+    contentRender?: ReactNode;
+}
+
+export const getRenderers = (props: GetRendersProps): Renderers => {
+    return {
+        shortcode: shortcodeRenderer(props)
+    };
 };
