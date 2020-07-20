@@ -1,7 +1,7 @@
 {
   "name": "texttemplateelement",
   "widgetName": "TextTemplateElement",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "My widget description",
   "copyright": "2020 Mendix Technology BV",
   "author": "Jelte Lagendijk <jelte.lagendijk@mendix.com>",

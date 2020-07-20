@@ -4,7 +4,6 @@ import classNames from "classnames";
 import ReactMarkdown from "react-markdown/with-html";
 
 const shortcodes = require("remark-shortcodes");
-const fenced = require("remark-fenced-divs");
 
 import { TextTemplateElementContainerProps } from "../typings/TextTemplateElementProps";
 
@@ -61,7 +60,7 @@ const TextTemplateElement: FunctionComponent<TextTemplateElementContainerProps> 
                     includeNodeIndex={optIncludeNodeIndex}
                     unwrapDisallowed={optUnwrapDisallowed}
                     disallowedTypes={disallowed}
-                    plugins={[shortcodes, fenced]}
+                    plugins={[shortcodes]}
                     renderers={getRenderers({ contentRender: dataContent })}
                 />
             </ErrorBoundary>
